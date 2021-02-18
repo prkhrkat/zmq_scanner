@@ -1,0 +1,7 @@
+numpy==1.20.1
+ocrd-fork-pylsd==0.0.3
+opencv-python==4.5.1.48
+Pillow==8.1.0
+pyzmq==22.0.3
+scipy==1.6.0
+zmq==0.0.0
