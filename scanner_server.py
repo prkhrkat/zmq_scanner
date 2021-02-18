@@ -5,6 +5,7 @@ import time
 import scan as scan
 import base64
 
+CONNECTION_URL = 'tcp://*:5558'
 
 class Server(threading.Thread):
     def __init__(self):
@@ -20,7 +21,7 @@ class Server(threading.Thread):
     def run(self):
         context = zmq.Context()
         frontend = context.socket(zmq.ROUTER)
-        frontend.bind('tcp://*:62057')
+        frontend.bind('CONNECTION_URL')
 
         backend = context.socket(zmq.DEALER)
         backend.bind('inproc://backend_endpoint')
